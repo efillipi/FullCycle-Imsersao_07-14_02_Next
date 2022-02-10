@@ -2,6 +2,12 @@
 import { ITweet } from 'interfaces/ITweet';
 import Image from 'next/image';
 import * as React from 'react';
+import TimeAgo from 'javascript-time-ago';
+import pt from 'javascript-time-ago/locale/pt-PT.json';
+
+TimeAgo.addDefaultLocale(pt);
+
+const timeAgo = new TimeAgo('pt-PR');
 
 type Props = {
   tweet: ITweet
@@ -32,7 +38,7 @@ export const TweetComponent: React.FunctionComponent<Props> = (props) => {
                 {' '}
                 .
                 {' '}
-                {tweet.CreatedAt}
+                {timeAgo.format(tweet.CreatedAt)}
               </span>
             </p>
           </div>

@@ -15,7 +15,6 @@ const EmailsPage: NextPage = () => {
   async function onSubmit(event: React.FormEvent) {
     event.preventDefault();
     const emailsTextarea = document.getElementById('emails') as HTMLTextAreaElement;
-    console.log('onSubmit', emailsTextarea.value);
     await api.post('mail-list', { emails: emailsTextarea.value.split('\n') });
   }
 
