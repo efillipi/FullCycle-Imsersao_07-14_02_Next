@@ -15,12 +15,12 @@ const PaginaPage: NextPage<Props> = (props) => {
   );
 };
 
-export const getServerSideProps : GetServerSideProps = async(conext)=>{
-  return{
-    props:{
-      name : 'Full Cycle'
+export const getServerSideProps: GetServerSideProps = async (conext) => {
+  return {
+    props: {
+      name: 'Full Cycle'
+    }
   }
-}
 
 }
 
