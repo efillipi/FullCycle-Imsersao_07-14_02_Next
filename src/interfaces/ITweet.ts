@@ -1,4 +1,3 @@
-
 export interface ITweetUser {
   Id: string;
   Name: string;
@@ -78,4 +77,3 @@ export interface ITweet {
   User: ITweetUser;
   CreatedAt: number;
 }
-
