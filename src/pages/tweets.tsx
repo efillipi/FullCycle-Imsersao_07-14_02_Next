@@ -12,7 +12,7 @@ const TweetsPage: NextPage = () => {
 
   return (
     <div>
-      <h1>Tweets</h1>
+      <h1 className="text-yellow-500">Tweets</h1>
 
       <h4>Listagem Tweets</h4>
     </div>
