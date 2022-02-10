@@ -1,5 +1,5 @@
 // @flow
-//fsc
+// fsc
 import { GetServerSideProps, NextPage } from 'next';
 import * as React from 'react';
 
@@ -10,7 +10,9 @@ type Props = {
 const PaginaPage: NextPage<Props> = (props) => {
   return (
     <h1>
-      Hello Edney {props.name}
+      Hello Edney
+
+      {props.name}
     </h1>
   );
 };
@@ -18,10 +20,9 @@ const PaginaPage: NextPage<Props> = (props) => {
 export const getServerSideProps: GetServerSideProps = async (conext) => {
   return {
     props: {
-      name: 'Full Cycle'
-    }
-  }
+      name: 'Full Cycle',
+    },
+  };
+};
 
-}
-
-export default PaginaPage
+export default PaginaPage;
