@@ -21,15 +21,16 @@ const EmailsPage: NextPage = () => {
   return (
     <div>
       <TitleComponent>Emails</TitleComponent>
-      <div className="border-b" />
       <form onSubmit={onSubmit}>
-        <textarea
-          className="border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow"
-          id="emails"
-          rows={10}
-          defaultValue={data.join('\n')}
-          placeholder="Digite os e-mail separados por linha"
-        />
+        <div className="mb-4">
+          <textarea
+            className="bg-default border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow dark:text-white"
+            id="emails"
+            rows={10}
+            defaultValue={data.join('\n')}
+            placeholder="Digite os e-mail separados por linha"
+          />
+        </div>
         <ButtonComponent>
           Salvar
         </ButtonComponent>
