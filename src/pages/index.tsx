@@ -11,7 +11,6 @@ const PaginaPage: NextPage<Props> = (props) => {
   return (
     <h1>
       Hello Edney
-
       {props.name}
     </h1>
   );
