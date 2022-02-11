@@ -1,5 +1,6 @@
 // @flow
 // fsc
+import { TitleComponent } from 'components/TitleComponent';
 import { GetServerSideProps, NextPage } from 'next';
 import * as React from 'react';
 
@@ -9,10 +10,7 @@ type Props = {
 
 const PaginaPage: NextPage<Props> = (props) => {
   return (
-    <h1>
-      Hello Edney
-      {props.name}
-    </h1>
+    <TitleComponent>Edney Fillipi {props.name}</TitleComponent>
   );
 };
 
