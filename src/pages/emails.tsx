@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable array-callback-return */
 // @flow
 import { NextPage } from 'next';
@@ -15,7 +16,11 @@ const EmailsPage: NextPage = () => {
   async function onSubmit(event: React.FormEvent) {
     event.preventDefault();
     const emailsTextarea = document.getElementById('emails') as HTMLTextAreaElement;
-    await api.post('mail-list', { emails: emailsTextarea.value.split('\n') });
+    await api.post('mail-list', { emails: emailsTextarea.value.split('\n') }).then(() => {
+      alert('Adicionado e-mails com sucesslo');
+    }).catch(() => {
+      alert('Erro ao adicionar e-mails');
+    });
   }
 
   return (
